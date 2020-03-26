@@ -14,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+// Analytics route
+Route::get('analytics', 'AnalyticsController');
+
+// Partner routes
+Route::apiResource('partners', 'PartnerController');
+
+// Agreement routes
+Route::apiResource('agreements', 'AgreementController');
+
+// Contact routes
+Route::apiResource('contact', 'ContactController');
+
